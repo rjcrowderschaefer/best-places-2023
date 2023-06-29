@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>The 50 Best Places to Travel in 2023 - {% block title %} {% endblock %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+        <script src="{% static 'scripts/main.js' %}" defer></script>
+    </head>
+    <body>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="/">
+                <img src="https://mms.businesswire.com/media/20210217005217/en/859579/22/4898133_TL-logo-BLK.jpg" width="112" height="28">
+              </a>
+          
+              <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+          
+            <div id="navbarBasicExample" class="navbar-menu">
+              <div class="navbar-start">
+                <a class="navbar-item" href="/">
+                  Home
+                </a>
+          
+                <a class="navbar-item" href="/about">
+                  About
+                </a>
+          
+                <div class="navbar-item has-dropdown is-hoverable">
+                  <a class="navbar-link" href="/places">
+                    Best Places
+                  </a>
+          
+                  <div class="navbar-dropdown">
+                    <a class="navbar-item" href="/places/cultural-riches">
+                      For Cultural Riches
+                    </a>
+                    <a class="navbar-item" href="/places/food-wine">
+                      For The Food - And Wine
+                    </a>
+                    <a class="navbar-item" href="/places/big-city-thrills">
+                      For Big-City Thrills
+                    </a>
+                    <a class="navbar-item" href="/places/moments-water">
+                        For Moments On The Water
+                    </a>
+                    <a class="navbar-item" href="/places/fresh-air-nature">
+                        For Fresh Air and Nature
+                    </a>
+                    <a class="navbar-item" href="/places/beach-vibes">
+                        For Beach Vibes
+                    <a class="navbar-item" href="/places/the-future">
+                        For A Look At The Future
+                    </a>
+                    <hr class="navbar-divider">
+                    <a class="navbar-item" href="/">
+                      Submit A Place
+                    </a>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="navbar-end">
+                <div class="navbar-item">
+                  <div class="buttons">
+                    <a class="button is-primary">
+                      <strong>Sign up</strong>
+                    </a>
+                    <a class="button is-light">
+                      Log in
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        <div class="container">
+            
+            {% block content %} {% endblock %}
+
+        </div>
+        <script src="" async defer></script>
+    </body>
+</html>
