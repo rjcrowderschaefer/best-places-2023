@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}The Full List{% endblock %}
+
+{% block content %}
+
+<h1>The 50 Best Places to Travel in 2023</h1>
+
+{% for place in places %}
+<p>{{place.type}}</p>
+<p>{{place.name}}</p>
+<img src="{{place.image}}">
+<p>{{place.bio}}</p>
+
+{% empty %}
+
+<p>No desinations available</p>
+
+{% endfor %}
+
+{% endblock %}
