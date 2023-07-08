@@ -8,10 +8,10 @@
 
 {% for place in places %}
 <p>{{place.type}}</p>
-<p>{{place.name}}</p>
+<h3><b>{{place.name}}</b></h3>
 <img src="{{place.image}}">
 <p>{{place.bio}}</p>
-
+<hr>
 {% empty %}
 
 <p>No desinations available</p>
