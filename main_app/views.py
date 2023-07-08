@@ -49,7 +49,12 @@ class CulturalRichesCategory(TemplateView):
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["places"] = Place.objects.all()
+        name = self.request.GET.get("name")
+        if name != None:
+            context["places"] = Place.objects.filter(name__icontains=name)
+            context["header"] = f'Search results for "{name}"'
+        else:
+            context["places"] = Place.objects.all()
         return context
     
 class FoodWineCategory(TemplateView):
@@ -57,7 +62,12 @@ class FoodWineCategory(TemplateView):
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["places"] = Place.objects.all()
+        name = self.request.GET.get("name")
+        if name != None:
+            context["places"] = Place.objects.filter(name__icontains=name)
+            context["header"] = f'Search results for "{name}"'
+        else:
+            context["places"] = Place.objects.all()
         return context
     
 class BigCityThrillsCategory(TemplateView):
@@ -65,7 +75,12 @@ class BigCityThrillsCategory(TemplateView):
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["places"] = Place.objects.all()
+        name = self.request.GET.get("name")
+        if name != None:
+            context["places"] = Place.objects.filter(name__icontains=name)
+            context["header"] = f'Search results for "{name}"'
+        else:
+            context["places"] = Place.objects.all()
         return context
     
 class MomentsWaterCategory(TemplateView):
@@ -73,7 +88,12 @@ class MomentsWaterCategory(TemplateView):
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["places"] = Place.objects.all()
+        name = self.request.GET.get("name")
+        if name != None:
+            context["places"] = Place.objects.filter(name__icontains=name)
+            context["header"] = f'Search results for "{name}"'
+        else:
+            context["places"] = Place.objects.all()
         return context
     
 class FreshAirNatureCategory(TemplateView):
@@ -81,7 +101,12 @@ class FreshAirNatureCategory(TemplateView):
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["places"] = Place.objects.all()
+        name = self.request.GET.get("name")
+        if name != None:
+            context["places"] = Place.objects.filter(name__icontains=name)
+            context["header"] = f'Search results for "{name}"'
+        else:
+            context["places"] = Place.objects.all()
         return context
     
 class BeachVibesCategory(TemplateView):
@@ -89,7 +114,12 @@ class BeachVibesCategory(TemplateView):
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["places"] = Place.objects.all()
+        name = self.request.GET.get("name")
+        if name != None:
+            context["places"] = Place.objects.filter(name__icontains=name)
+            context["header"] = f'Search results for "{name}"'
+        else:
+            context["places"] = Place.objects.all()
         return context
 
 class TheFutureCategory(TemplateView):
@@ -97,5 +127,10 @@ class TheFutureCategory(TemplateView):
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["places"] = Place.objects.all()
+        name = self.request.GET.get("name")
+        if name != None:
+            context["places"] = Place.objects.filter(name__icontains=name)
+            context["header"] = f'Search results for "{name}"'
+        else:
+            context["places"] = Place.objects.all()
         return context
