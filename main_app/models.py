@@ -23,8 +23,8 @@ CATEGORY_CHOICES_FULL = (
 )
 
 class Place(models.Model):
-    type = models.CharField(max_length=6, choices=CATEGORY_CHOICES_ABBREV, default='-')
-    typefull = models.CharField(max_length=50, choices=CATEGORY_CHOICES_FULL, default='-')
+    type = models.CharField(max_length=6, choices=CATEGORY_CHOICES_ABBREV)
+    typefull = models.CharField(max_length=50, choices=CATEGORY_CHOICES_FULL)
     name = models.CharField(max_length=150)
     image = models.CharField(max_length=500)
     bio = models.TextField(max_length=2000)

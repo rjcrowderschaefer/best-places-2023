@@ -3,7 +3,7 @@ from django.views.generic.base import TemplateView
 from django.views import View
 from django.http import HttpResponse
 from .models import Place
-from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 # Create your views here.
 
@@ -55,6 +55,11 @@ class PlaceUpdate(UpdateView):
     model = Place
     fields = ['type', 'typefull', 'name', 'image', 'bio']
     template_name = "place_update.html"
+    success_url = "/places/"
+
+class PlaceDelete(DeleteView):
+    model = Place
+    template_name = "place_delete_confirmation.html"
     success_url = "/places/"
 
 class CulturalRichesCategory(TemplateView):
