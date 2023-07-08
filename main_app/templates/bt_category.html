@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}The Full List{% endblock %}
+
+{% block content %}
+
+<h1>Top desinations for big city thrills</h1>
+
+{% for place  in places %}
+
+    {% if place.type == 'BT' %}
+
+    <p>{{place.type}}</p>
+    <h3><b>{{place.name}}</b></h3>
+    <img src="{{place.image}}">
+    <p>{{place.bio}}</p>
+    <hr>
+
+    {% endif %}
+
+{% empty %}
+
+<p>No desinations available</p>
+
+{% endfor %}
+
+{% endblock %}

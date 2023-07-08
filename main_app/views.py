@@ -59,3 +59,43 @@ class FoodWineCategory(TemplateView):
         context = super().get_context_data(**kwargs)
         context["places"] = Place.objects.all()
         return context
+    
+class BigCityThrillsCategory(TemplateView):
+    template_name = "bt_category.html"
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["places"] = Place.objects.all()
+        return context
+    
+class MomentsWaterCategory(TemplateView):
+    template_name = "mw_category.html"
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["places"] = Place.objects.all()
+        return context
+    
+class FreshAirNatureCategory(TemplateView):
+    template_name = "fn_category.html"
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["places"] = Place.objects.all()
+        return context
+    
+class BeachVibesCategory(TemplateView):
+    template_name = "bv_category.html"
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["places"] = Place.objects.all()
+        return context
+
+class TheFutureCategory(TemplateView):
+    template_name = "tf_category.html"
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["places"] = Place.objects.all()
+        return context
