@@ -3,7 +3,7 @@ from django.views.generic.base import TemplateView
 from django.views import View
 from django.http import HttpResponse
 from .models import Place
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView
 
 # Create your views here.
 
@@ -49,6 +49,12 @@ class PlaceCreate(CreateView):
     model = Place
     fields = ['type', 'typefull', 'name', 'image', 'bio']
     template_name = "place_create.html"
+    success_url = "/places/"
+
+class PlaceUpdate(UpdateView):
+    model = Place
+    fields = ['type', 'typefull', 'name', 'image', 'bio']
+    template_name = "place_update.html"
     success_url = "/places/"
 
 class CulturalRichesCategory(TemplateView):

@@ -11,7 +11,6 @@
 <form class="mb-5" method="get">
     <div class="field has-addons">
       <div class="control">
-        <!--  Our input will search by name of artist  -->
         <input class="input" type="text" name="name" placeholder="name" />
       </div>
       <div class="control">
@@ -27,6 +26,19 @@
 
     <h3><b>{{place.name}}</b></h3>
     <p>{{place.typefull}}</p>
+    <div class="detail__container">
+        <div class="buttons">
+        <a href="{% url 'place_update' place.pk %}" class="button is-info"> Update Details
+            <span class="icon">
+                <i class="fas fa-edit"></i>
+            </span>
+        </a>
+        <a href="" class="button is-danger">
+            <span class="icon">
+                <i class="fas fa-trash-alt"></i>
+            </span>
+        </a>
+    </div>
     <img src="{{place.image}}">
     <p>{{place.bio}}</p>
     <hr>

@@ -3,13 +3,13 @@ from django.db import models
 # Create your models here.
 
 CATEGORY_CHOICES_ABBREV = (
-    ('For Cultural Riches', 'CR'),
-    ('For the Food - And Wine', 'FW'),
-    ('For Big-city Thrills', 'BT'),
-    ('For Moments On The Water', 'MW'),
-    ('For Fresh Air and Nature', 'FN'),
-    ('For Beach Vibes', 'BV'),
-    ('For A Look At The Future', 'TF'),
+    ('CR', 'CR'),
+    ('FW', 'FW'),
+    ('BT', 'BT'),
+    ('MW', 'MW'),
+    ('FN', 'FN'),
+    ('BV', 'BV'),
+    ('TF', 'TF'),
 )
 
 CATEGORY_CHOICES_FULL = (
@@ -23,7 +23,7 @@ CATEGORY_CHOICES_FULL = (
 )
 
 class Place(models.Model):
-    type = models.CharField(max_length=25, choices=CATEGORY_CHOICES_ABBREV, default='-')
+    type = models.CharField(max_length=6, choices=CATEGORY_CHOICES_ABBREV, default='-')
     typefull = models.CharField(max_length=50, choices=CATEGORY_CHOICES_FULL, default='-')
     name = models.CharField(max_length=150)
     image = models.CharField(max_length=500)
