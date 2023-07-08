@@ -6,6 +6,8 @@
 
 <h1>The 50 Best Places to Travel in 2023</h1>
 
+<a class="button is-dark" href="{% url 'place_create' %}">Add a new destination</a>
+
 {% for place in places %}
 <p>{{place.type}}</p>
 <h3><b>{{place.name}}</b></h3>
